@@ -4,22 +4,33 @@
 
 /* int main começa o programa, é case sensitive*/
 int main() {
-	printf("Hello World\n");
-	int idade = 0;
+	char nome[50];
+	int idade;
 	char sexo;
 	float altura;
 	double numero_grande;
 	
-	sexo = 'm';
-	altura = 1.8900;
-	numero_grande= 1.78979793545;
-	idade = 29;
+	printf("Informe o nome");
+	scanf("%[^\n]s", nome);
 	
-	printf("variáveis\n");
+	printf("Informe a idade: ");
+	scanf("%d",&idade);
+	
+	printf("Informe o sexo");
+	scanf(" %c",&sexo);
+	
+	printf("Informe a altura");
+	scanf("%f",&altura);
+	
+	printf("Infomrme o número");
+	scanf("%lf",&numero_grande);
+	
+	printf("Valores informados\n");
 	/*função printf*/
-	printf("Idade informada:%d\n",idade); //%d ou %i pra inteiro
-	printf("Sexo informada:%c\n",sexo); //%c pra char
-	printf("Altura informada:%.2f\n",altura); //%f pra float
+	printf("Nome Informado: %s\n",nome);
+	printf("Idade informada: %d\n",idade); //%d ou %i pra inteiro
+	printf("Sexo informada: %c\n",sexo); //%c pra char
+	printf("Altura informada: %.2f\n",altura); //%f pra float
 	printf("Número informado: %.8f \n",numero_grande);
 	return 0;
 }
