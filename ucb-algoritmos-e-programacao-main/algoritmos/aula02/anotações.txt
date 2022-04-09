@@ -1,0 +1,39 @@
+dentro da string 
+\n pula linha
+\d espaçamento(tab)
+
+comentários em C
+//uma linha
+
+/*várias
+linhas
+aaaas
+*/
+
+
+variáveis em C
+- Alocação de espaços em memória
+
+3 elementos 
+- nome (identificador)
+ - Regras para nomeação de variáveis
+	- Não ter espaços: primeiro nome(primeiro_nome ou primeiroNome)
+	- Não usar caracteres especiais(somente a-z 0-9 e _)
+	- Não ter como primeiro caractere um número: 1nome
+	- Boa prática (nãp usar utilizar UPPERCASE)
+- tipo
+ int (1,2,10)
+ char ("a", "7"," ")	
+ float (1.555555) até 6 casas decimais
+ double(1.555555555555) acima de 6 casas decimais 
+ *void(alguns autores)
+- valor
+
+3 momentos:
+	declaração
+		tipo nome; (int_idade)
+		tipo nome = valor; ( int idade = 0;)
+	inicialização
+		Primeira atribuição de valor à variável.
+	atribuição
+		Atribuição de valor ao espaço reservado(variável).
