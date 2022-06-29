@@ -55,7 +55,7 @@ variáveis em C
 	double: %f ou (%.8f)
 	string: %s
 
-#include <stdio.h> =  standard input output
+#include <stdio.h> =  standard input output header
 
 operadores aritméticos
 
@@ -76,7 +76,8 @@ lógicos/comparação
 	&&
 	||
 
-
+função de entrada SCANF
+scanf("%d",&variável);
 
 
 
