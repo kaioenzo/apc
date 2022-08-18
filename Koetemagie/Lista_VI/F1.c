@@ -1,8 +1,10 @@
 #include <stdio.h>
 
+#define MAX 60
+
 int main () {
 
-  char string[61];
+  char string[MAX + 1];
   int vogais_contador = 0;
 
   scanf("%s", string);
@@ -48,14 +50,14 @@ int main () {
   // Se for par, pegar metade.
   if ( tamanho_vogais % 2 == 0) {
 
-  // Verificar se primeira metade é igual a segunda metade.
-  for (int p = 0, s = tamanho_vogais - 1; p < tamanho_vogais / 2; p++, s--) {
+    // Verificar se primeira metade é igual a segunda metade.
+    for (int p = 0, s = tamanho_vogais - 1; p < tamanho_vogais / 2; p++, s--) {
 
-    // Comparar a primeira metade com a segunda metade (segunda de tras pra frente)
-    if (vogais[p] != vogais[s]) {
-      engracado = 0;
-      break;
-    }
+      // Comparar a primeira metade com a segunda metade (segunda de tras pra frente)
+      if (vogais[p] != vogais[s]) {
+        engracado = 0;
+        break;
+      }
 
   }
 

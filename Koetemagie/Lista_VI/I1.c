@@ -2,8 +2,6 @@
 
 void substituir (char antiga[]) {
 
-    char letra;
-
     for (int i = 0; antiga[i] != '\0'; i++) {
 
         int letra = (int) antiga[i];
@@ -11,7 +9,7 @@ void substituir (char antiga[]) {
         // Verificar se é alfabético.
         if (letra >= 65 && letra <= 90) {
 
-          if (letra + 13 > 90) antiga[i] = (char) (letra - 13);
+          if      (letra + 13 > 90) antiga[i] = (char) (letra - 13);
           else if (letra - 13 < 65) antiga[i] = (char) (letra + 13);
 
         }
