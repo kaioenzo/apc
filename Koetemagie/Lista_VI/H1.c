@@ -3,6 +3,11 @@
 #define MAX_INPUT 10001
 #define MAX_KEY 41
 
+/**
+ * Aaa
+ * @param lol
+ *
+ **/
 void substituir (char antiga[], char chave[], char palavra[]) {
 
     int nova_index = 0;
