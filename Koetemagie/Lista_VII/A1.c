@@ -34,7 +34,7 @@ int main () {
                 coluna_desmatamento++;
                 tem_desmatamento = 1;
             }
-            
+
         }
 
         if (coluna_desmatamento > mais_desmatada) {
