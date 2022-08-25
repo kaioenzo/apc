@@ -61,12 +61,12 @@ int main () {
 
           // I. Até encontrar o primeiro 1 abaixo dele.
           int primeiro_um = i;
-          for (; primeiro_um < tamanho; primeiro_um++) {
 
+          // II. Encontrar a posição do novo 1.
+          for (; primeiro_um < tamanho; primeiro_um++)
             if (matriz[primeiro_um][j] == 1) break;
 
-          }
-
+          // III. Definir a posição do novo 1.
           if (primeiro_um != i) {
 
             matriz[primeiro_um - 1][j] = 1;
@@ -93,6 +93,7 @@ int main () {
     }
 
     // 1. Identifique as linhas da matriz que contém apenas 1’s e substitua os 1’s por 0’s;
+    //    Repetindo apenas para descobrir se continuamos com o loop.
     for (int i = 0; i < tamanho; i++) {
 
       verificador_soum = 1;
