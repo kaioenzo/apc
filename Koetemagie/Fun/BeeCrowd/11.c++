@@ -24,6 +24,8 @@ int main ()
 
     total += product->units * product->price;
 
+    delete product;
+
   }
 
   std::cout.precision(2);
