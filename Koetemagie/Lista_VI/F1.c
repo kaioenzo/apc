@@ -9,7 +9,7 @@ int main () {
 
   scanf("%s", string);
 
-  // 1. Verificar se tem uma vogal.
+    // 1. Verificar se tem uma vogal.
     for (int i = 0; string[i] != '\0'; i++) {
 
       switch (string[i]) {
@@ -87,28 +87,28 @@ int main () {
   //    a, e, i, o, u
   //
   //    huaauhahhuahau
-  //    uaau a uaau
+  //    uaau a uaau -> uaau a uaau
   //    uaaua
   //    uaaua
   //    Sim.
   //
   //    hahaha
-  //    aaa
+  //    aaa -> aaa
   //    Sim.
   //
   //    huehuehue
-  //    ueueue
+  //    ueueue -> eueueu
   //    ueu
   //    eue
   //    Não.
   //
   //    riajkjdhhihhjak
-  //    iaia
+  //    iaia -> aiai
   //    ia
   //    ai
   //    Não
   //
-  //    xxx
+  //    xxx -> xxx e
   //    Invalido
 
 

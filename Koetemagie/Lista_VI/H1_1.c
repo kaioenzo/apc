@@ -1,40 +1,37 @@
 #include <stdio.h>
 
-#define MAX_INPUT 10001
-#define MAX_KEY 41
+#define MAX_INPUT 10000
+#define MAX_KEY 40
 
 /**
- * Aaa
- * @param lol
- *
+ * A função para substituir.
  **/
 void substituir (char antiga[], char chave[], char palavra[]) {
 
+    // Criar uma nova string!
     int nova_index = 0;
     char nova[MAX_INPUT];
 
-    int tamanho_antiga = 0, tamanho_chave = 0, tamanho_palavra = 0;
-
-    int achado;
-
     // Achar o tamanho das strings.
+    int tamanho_antiga, tamanho_chave, tamanho_palavra;
     for (; antiga[tamanho_antiga]   != '\0'; tamanho_antiga++);
     for (; chave[tamanho_chave]     != '\0'; tamanho_chave++);
     for (; palavra[tamanho_palavra] != '\0'; tamanho_palavra++);
+
     // 1. Loop de cada character.
     //    i = index do character de toda a string original
     for (int i = 0; antiga[i] != '\0'; i++) {
 
-        // Se o primeiro char for igual.
+        // Se o primeiro char for igual ao primeiro char da chave.
         if (antiga[i] == chave[0]) {
 
-            // Assumir que achamos.
-            achado = 1;
+            // Assumir que achamos a palavra igual a chave.
+            int achado = 1;
 
-            // Testar o resto pra frente da string para ver se é igual.
+            // Testar o resto pra frente da palavra para ver se é de fato igual.
             for (int j = 0; chave[j] != '\0'; j++) {
 
-                // Se não for igual, falamos que não achamos.
+                // Se não for igual esse char, falamos que não achamos e fechamos o loop.
                 if (chave[j] != antiga[i+j]) {
                     achado = 0;
                     break;
@@ -42,11 +39,11 @@ void substituir (char antiga[], char chave[], char palavra[]) {
 
             }
 
-            // Se achamos, salvar essa parte.
+            // Se de fato achamos, nós substituimos a string.
             if (achado) {
 
-                for (int i = 0; i < tamanho_palavra; i++) {
-                    nova[nova_index] = palavra[i];
+                for (int a = 0; a < tamanho_palavra; a++) {
+                    nova[nova_index] = palavra[a];
                     nova_index++;
                 }
 
@@ -54,12 +51,11 @@ void substituir (char antiga[], char chave[], char palavra[]) {
 
             }
 
+            // Se não achamos.
             else nova[nova_index++] = antiga[i];
 
         // Só continuar com o resto.
-        }
-        else
-        {
+        } else {
 
             nova[nova_index++] = antiga[i];
 
@@ -91,4 +87,3 @@ int main()
 
     return 0;
 }
-

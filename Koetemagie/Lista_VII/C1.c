@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX 81
+//#define MAX 81
 
 int main()
 {
@@ -10,8 +10,8 @@ int main()
 
     scanf("%d %d\n", &quantidades[0], &quantidades[1]);
 
-    char S[quantidades[0]][MAX];
-    char P[quantidades[1]][MAX];
+    char S[quantidades[0]][81];
+    char P[quantidades[1]][81];
 
     for (int i = 0; i < quantidades[0]; i++)
         scanf("%s", S[i]);
@@ -23,6 +23,10 @@ int main()
 
         for (int j = 0; j < quantidades[1]; j++)
         {
+
+          //////////////////////////////////////////////////////
+          ///
+          /// Lógica de comparação.
 
             igual = 1;
 
@@ -42,6 +46,8 @@ int main()
                 printf("1\n");
                 return 0;
             }
+
+            ////////////////////////////////////////////////////    
         }
     }
 

@@ -1,4 +1,5 @@
 **/bin
 *.o
-.ccls-cache/
+**/.ccls-cache/
+**/.ccls/
 **/AJudando

@@ -1,49 +1,47 @@
 #include <stdio.h>
+#include <string.h>
 
-#define MAX 1001
+int main () {
 
-// niv?
-// Famoso VIM! melhor editor.
-
-int main()
-{
-
-    int linhas, max_anterior = -1;
+    int linhas;
     char some;
 
     int pos[2];
 
     scanf("%d\n", &linhas);
-    char strings[linhas][MAX];
+    char strings[linhas][1001];
 
     for (int i = 0; i < linhas; i++)
-        fgets(strings[i], MAX, stdin);
+        fgets(strings[i], 1001, stdin);
+
     scanf("%d %d\n", &pos[0], &pos[1]);
 
-    --pos[0];
-    --pos[1];
+    pos[0] = pos[0] - 1;
+    pos[1] = pos[1] - 1;
 
-    char next_pos;
+    char proxima_pos;
+    int max_anterior = -1;
 
-    while (scanf("%c\n", &next_pos) != EOF)
+    while (scanf("%c\n", &proxima_pos) != EOF)
     {
 
-        if (next_pos == 'j' && pos[0] + 1 < linhas)
+        if (proxima_pos == 'j' && pos[0] + 1 < linhas)
             pos[0]++;
-        else if (next_pos == 'k' && pos[0] - 1 >= 0)
+        else if (proxima_pos == 'k' && pos[0] - 1 >= 0)
             pos[0]--;
 
-        int tamanho = 0;
-        for (; strings[pos[0]][tamanho] != '\n'; tamanho++)
-            ;
+        // 1. Tamanho da linha.
+        int tamanho = strlen( strings[pos[0]] );
+
+        // 1: Calcular na mão.
+        //int tamanho = 0;
+        //for (; strings[pos[0]][tamanho] != '\n'; tamanho++);
 
         if (pos[1] < max_anterior)
         {
             pos[1] = max_anterior;
             max_anterior = -1;
         }
-
-        // printf("%d %d\n", pos[1], tamanho);
 
         if (pos[1] >= tamanho)
         {

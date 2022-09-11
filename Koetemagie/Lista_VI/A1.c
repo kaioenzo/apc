@@ -9,7 +9,6 @@ int main () {
 
   for (; string[tamanho] != '\0'; tamanho++);
 
-
   printf("%d\n", tamanho);
 
 }
