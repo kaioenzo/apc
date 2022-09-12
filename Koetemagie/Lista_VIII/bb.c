@@ -43,7 +43,7 @@ struct tipoFiliacao separaLinhaCSV ( char * linha ) {
       a = -1;
 
     // Não continuar se o char atual for ' ' e algum dos lados for ','.
-    } else if (!(linha[i] == ' ' && (linha[i-1] == ',' || linha[i+1] == ','))) {
+    } else { //if (!(linha[i] == ' ' && (linha[i-1] == ',' || linha[i+1] == ','))) {
 
       // Guardar na string atual.
       switch (n) {
@@ -67,7 +67,7 @@ struct tipoFiliacao separaLinhaCSV ( char * linha ) {
 
 //int main () {
 //
-//    tipoFiliacao a = separaLinhaCSV( ",,," ) ;
+//    tipoFiliacao a = separaLinhaCSV( "Ana , certo  lol  , nada " ) ;
 //
 //    printf("%s\n%s\n%s\n", a.nome, a.nomeMae, a.nomePai);
 //

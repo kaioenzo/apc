@@ -22,21 +22,23 @@ typedef tipoBanda;
 
 void pesquisarNomeMusica (char pesquisa[80], struct tipoBanda bandas[50], int n) {
 
+  int verificador = 0;
+
   for (int i = 0; i < n; ++i) {
 
-    for (int m = 0; m < bandas->qtd; ++m)
+    for (int m = 0; m < bandas[i].qtd; ++m)
 
       if (strcmp(pesquisa, bandas[i].musicas[m].nome) == 0) {
 
         printf("%s : ano %d\n", bandas[i].nome, bandas[i].musicas[m].ano);
 
-        return;
+        verificador = 1;
 
       }
 
   }
 
-  printf("Musica nao cadastrada\n");
+  if (verificador == 0) printf("Musica nao cadastrada\n");
 
 }
 
