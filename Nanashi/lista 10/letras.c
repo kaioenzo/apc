@@ -2,27 +2,27 @@
 
 int main () {
 
-    char comparador;
+    char letras;
     char texto[1000];
-    int contComparador = 0;
-    int contPalavras = 0;
-    double porcent;
+    int possui = 0;
+    int palavras = 0;
+    double percent;
 
-    scanf("%c", &comparador);
-    scanf(" %[^\n]s", texto);
+    scanf("%c\n", &letras);
 
-    for ( int i = 0; texto[i] != '\0'; i++ ) {
+    while ( scanf("%s", texto) != EOF ) {
 
-        if ( texto[i] == comparador && contComparador <= contPalavras) contComparador++;
-        if ( texto[i] == ' ' && texto[i+1] != ' ') contPalavras++;
+        for ( int i = 0; texto[i] != '\0'; i++ ) {
 
+            if ( texto[i] == letras) {
+                possui++;
+                break;
+            }
+        }
+        palavras++;
     }
-    contPalavras++;
 
-    porcent = ((double)contComparador / (double)contPalavras) * 100;
-    
-    printf("letras: %d\n", contComparador);
-    printf("palavras: %d\n", contPalavras);
-    printf("%.1lf\n", porcent);
+    percent = ( (double) possui / (double) palavras ) * 100;
+    printf("%.1lf\n", percent);
 
 }
